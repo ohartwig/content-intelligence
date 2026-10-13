@@ -1,0 +1,23 @@
+contentIntelligence:
+  analyzer:
+    weights:
+      metadata_completeness: 0.25
+      structure_quality: 0.25
+      freshness: 0.20
+      brand_voice: 0.15
+      consistency: 0.15
+  thresholds:
+    critical: 50
+    aiReady: 80
+  brandVoice:
+    identifier: 'default'
+    language: 'de'
+    addressForm: 'Sie'
+    toneAttributes:
+      - 'professional'
+      - 'friendly'
+    forbiddenTerms: []
+    requiredTerms: []
+    maxSentenceLength: 25
+    noHashtags: false
+    noTargetAudienceNaming: false

@@ -1,0 +1,64 @@
+categories:
+  contentIntelligence:
+    label: 'Content Intelligence'
+  contentIntelligence.analyzer:
+    label: 'Analyzer Weights'
+    parent: contentIntelligence
+  contentIntelligence.thresholds:
+    label: 'Thresholds'
+    parent: contentIntelligence
+  contentIntelligence.brandVoice:
+    label: 'Brand Voice'
+    parent: contentIntelligence
+
+settings:
+  contentIntelligence.analyzer.weights.metadata_completeness:
+    type: number
+    default: 0.25
+    label: 'Metadata Completeness Analyzer Weight'
+    category: contentIntelligence.analyzer
+  contentIntelligence.analyzer.weights.structure_quality:
+    type: number
+    default: 0.25
+    label: 'Structure Quality Analyzer Weight'
+    category: contentIntelligence.analyzer
+  contentIntelligence.analyzer.weights.freshness:
+    type: number
+    default: 0.20
+    label: 'Freshness Analyzer Weight'
+    category: contentIntelligence.analyzer
+  contentIntelligence.analyzer.weights.brand_voice:
+    type: number
+    default: 0.15
+    label: 'Brand Voice Analyzer Weight'
+    category: contentIntelligence.analyzer
+  contentIntelligence.analyzer.weights.consistency:
+    type: number
+    default: 0.15
+    label: 'Consistency Analyzer Weight'
+    category: contentIntelligence.analyzer
+  contentIntelligence.thresholds.critical:
+    type: int
+    default: 50
+    label: 'Critical Score Threshold'
+    category: contentIntelligence.thresholds
+  contentIntelligence.thresholds.aiReady:
+    type: int
+    default: 80
+    label: 'AI-Ready Score Threshold'
+    category: contentIntelligence.thresholds
+  contentIntelligence.brandVoice.language:
+    type: string
+    default: 'de'
+    label: 'Brand Voice Language'
+    category: contentIntelligence.brandVoice
+  contentIntelligence.brandVoice.addressForm:
+    type: string
+    default: 'Sie'
+    label: 'Address Form (Du/Sie)'
+    category: contentIntelligence.brandVoice
+  contentIntelligence.brandVoice.maxSentenceLength:
+    type: int
+    default: 25
+    label: 'Maximum Sentence Length (words)'
+    category: contentIntelligence.brandVoice

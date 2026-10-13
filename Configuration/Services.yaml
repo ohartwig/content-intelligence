@@ -1,0 +1,33 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Koh\ContentIntelligence\:
+    resource: '../Classes/'
+
+  _instanceof:
+    Koh\ContentIntelligence\Domain\Contract\AnalyzerInterface:
+      tags: ['content_intelligence.analyzer']
+
+  Koh\ContentIntelligence\Application\Service\AnalysisOrchestrator:
+    arguments:
+      $analyzers: !tagged_iterator content_intelligence.analyzer
+
+  Koh\ContentIntelligence\Domain\Contract\ContentExtractorInterface:
+    alias: Koh\ContentIntelligence\Infrastructure\Persistence\ContentExtractorService
+
+  Koh\ContentIntelligence\Domain\Contract\AnalysisResultRepositoryInterface:
+    alias: Koh\ContentIntelligence\Infrastructure\Persistence\DoctrineAnalysisResultRepository
+
+  Koh\ContentIntelligence\Domain\Contract\AuditEntryRepositoryInterface:
+    alias: Koh\ContentIntelligence\Infrastructure\Persistence\DoctrineAuditEntryRepository
+
+  Koh\ContentIntelligence\Presentation\Controller\DashboardController:
+    public: true
+
+  cache.content_intelligence:
+    class: TYPO3\CMS\Core\Cache\Frontend\FrontendInterface
+    factory: ['@TYPO3\CMS\Core\Cache\CacheManager', 'getCache']
+    arguments: ['content_intelligence']

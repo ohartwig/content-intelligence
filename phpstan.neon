@@ -1,0 +1,13 @@
+# Level and rule set come from the shared standard in koh/dev, so a change
+# there reaches this repository. Only the paths and the deviations below are
+# local — the shared file deliberately omits paths, because a relative path in
+# it would resolve inside vendor/.
+includes:
+  - vendor/koh/dev-typo3/config/typo3/phpstan.neon
+
+parameters:
+  paths:
+    - Classes
+  excludePaths:
+    - Classes/Infrastructure/Scheduler
+  treatPhpDocTypesAsCertain: false

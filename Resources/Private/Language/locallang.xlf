@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="messages" date="2026-03-23T00:00:00Z" product-name="content_intelligence">
+        <header/>
+        <body>
+            <trans-unit id="mlang_tabs_tab" resname="mlang_tabs_tab">
+                <source>Content Intelligence</source>
+            </trans-unit>
+            <trans-unit id="mlang_labels_tabdescr" resname="mlang_labels_tabdescr">
+                <source>Content quality and governance analysis</source>
+            </trans-unit>
+            <trans-unit id="mlang_labels_tablabel" resname="mlang_labels_tablabel">
+                <source>Content Intelligence</source>
+            </trans-unit>
+            <trans-unit id="pages.tab" resname="pages.tab">
+                <source>Content Intelligence</source>
+            </trans-unit>
+            <trans-unit id="pages.readiness_score" resname="pages.readiness_score">
+                <source>AI-Readiness Score</source>
+            </trans-unit>
+            <trans-unit id="pages.last_analysis" resname="pages.last_analysis">
+                <source>Last Analysis</source>
+            </trans-unit>
+            <trans-unit id="pages.last_review" resname="pages.last_review">
+                <source>Last Review</source>
+            </trans-unit>
+            <trans-unit id="dashboard.title" resname="dashboard.title">
+                <source>Content Intelligence Dashboard</source>
+            </trans-unit>
+            <trans-unit id="dashboard.pagesAnalyzed" resname="dashboard.pagesAnalyzed">
+                <source>Pages Analyzed</source>
+            </trans-unit>
+            <trans-unit id="dashboard.aiReady" resname="dashboard.aiReady">
+                <source>AI-Ready</source>
+            </trans-unit>
+            <trans-unit id="dashboard.needsImprovement" resname="dashboard.needsImprovement">
+                <source>Needs Improvement</source>
+            </trans-unit>
+            <trans-unit id="dashboard.critical" resname="dashboard.critical">
+                <source>Critical</source>
+            </trans-unit>
+            <trans-unit id="dashboard.averageScore" resname="dashboard.averageScore">
+                <source>Average Score</source>
+            </trans-unit>
+            <trans-unit id="table.page" resname="table.page">
+                <source>Page</source>
+            </trans-unit>
+            <trans-unit id="table.score" resname="table.score">
+                <source>Score</source>
+            </trans-unit>
+            <trans-unit id="table.lastAnalysis" resname="table.lastAnalysis">
+                <source>Last Analysis</source>
+            </trans-unit>
+            <trans-unit id="table.actions" resname="table.actions">
+                <source>Actions</source>
+            </trans-unit>
+            <trans-unit id="table.uid" resname="table.uid">
+                <source>UID:</source>
+            </trans-unit>
+            <trans-unit id="button.details" resname="button.details">
+                <source>Details</source>
+            </trans-unit>
+            <trans-unit id="button.backToOverview" resname="button.backToOverview">
+                <source>Back to Overview</source>
+            </trans-unit>
+            <trans-unit id="auditLog.title" resname="auditLog.title">
+                <source>Audit Log</source>
+            </trans-unit>
+            <trans-unit id="auditLog.pageUid" resname="auditLog.pageUid">
+                <source>Page UID</source>
+            </trans-unit>
+            <trans-unit id="auditLog.table" resname="auditLog.table">
+                <source>Table</source>
+            </trans-unit>
+            <trans-unit id="auditLog.field" resname="auditLog.field">
+                <source>Field</source>
+            </trans-unit>
+            <trans-unit id="auditLog.origin" resname="auditLog.origin">
+                <source>Origin</source>
+            </trans-unit>
+            <trans-unit id="auditLog.aiProvider" resname="auditLog.aiProvider">
+                <source>AI Provider</source>
+            </trans-unit>
+            <trans-unit id="auditLog.created" resname="auditLog.created">
+                <source>Created</source>
+            </trans-unit>
+            <trans-unit id="auditLog.reviewed" resname="auditLog.reviewed">
+                <source>Reviewed</source>
+            </trans-unit>
+            <trans-unit id="badge.reviewed" resname="badge.reviewed">
+                <source>Reviewed</source>
+            </trans-unit>
+            <trans-unit id="badge.pending" resname="badge.pending">
+                <source>Pending</source>
+            </trans-unit>
+            <trans-unit id="auditLog.noEntries" resname="auditLog.noEntries">
+                <source>No unreviewed audit entries.</source>
+            </trans-unit>
+            <trans-unit id="pageDetail.title" resname="pageDetail.title">
+                <source>Page Analysis Detail (UID: %s)</source>
+            </trans-unit>
+            <trans-unit id="pageDetail.suggestions" resname="pageDetail.suggestions">
+                <source>Suggestions</source>
+            </trans-unit>
+            <trans-unit id="pageDetail.noResults" resname="pageDetail.noResults">
+                <source>No analysis results found for this page.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

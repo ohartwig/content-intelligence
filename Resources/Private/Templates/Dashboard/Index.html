@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:ci="http://typo3.org/ns/Koh/ContentIntelligence/Presentation/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Content">
+    <h1><f:translate key="dashboard.title" extensionName="ContentIntelligence" /></h1>
+
+    <div class="row mb-4">
+        <div class="col-sm-2"><div class="card text-center"><div class="card-body"><h3>{summary.total}</h3><small><f:translate key="dashboard.pagesAnalyzed" extensionName="ContentIntelligence" /></small></div></div></div>
+        <div class="col-sm-2"><div class="card text-center text-bg-success"><div class="card-body"><h3>{summary.aiReady}</h3><small><f:translate key="dashboard.aiReady" extensionName="ContentIntelligence" /></small></div></div></div>
+        <div class="col-sm-3"><div class="card text-center text-bg-warning"><div class="card-body"><h3>{summary.needsImprovement}</h3><small><f:translate key="dashboard.needsImprovement" extensionName="ContentIntelligence" /></small></div></div></div>
+        <div class="col-sm-2"><div class="card text-center text-bg-danger"><div class="card-body"><h3>{summary.critical}</h3><small><f:translate key="dashboard.critical" extensionName="ContentIntelligence" /></small></div></div></div>
+        <div class="col-sm-3"><div class="card text-center"><div class="card-body"><h3><f:format.number decimals="1">{summary.averageScore}</f:format.number>%</h3><small><f:translate key="dashboard.averageScore" extensionName="ContentIntelligence" /></small></div></div></div>
+    </div>
+
+    <f:if condition="{pages}">
+        <f:then>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th><f:translate key="table.page" extensionName="ContentIntelligence" /></th>
+                        <th><f:translate key="table.score" extensionName="ContentIntelligence" /></th>
+                        <th><f:translate key="table.lastAnalysis" extensionName="ContentIntelligence" /></th>
+                        <th><f:translate key="table.actions" extensionName="ContentIntelligence" /></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <f:for each="{pages}" as="page">
+                        <tr>
+                            <td>{page.title} <small class="text-body-secondary">(UID: {page.uid})</small></td>
+                            <td><ci:readinessScoreBadge score="{page.tx_contentintelligence_readiness_score}" /></td>
+                            <td><f:if condition="{page.tx_contentintelligence_last_analysis}"><f:format.date format="d.m.Y H:i">@{page.tx_contentintelligence_last_analysis}</f:format.date></f:if></td>
+                            <td><f:link.action action="pageDetail" arguments="{pageUid: page.uid}" class="btn btn-default btn-sm"><f:translate key="button.details" extensionName="ContentIntelligence" /></f:link.action></td>
+                        </tr>
+                    </f:for>
+                </tbody>
+            </table>
+        </f:then>
+        <f:else><div class="callout callout-info"><f:translate key="dashboard.noPages" extensionName="ContentIntelligence" /></div></f:else>
+    </f:if>
+</f:section>
+</html>
